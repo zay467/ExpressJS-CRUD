@@ -18,6 +18,8 @@ db.sequelize
 app.use(bodyParser.json());
 app.use(cors());
 
+require("./routes/customer.route")(app);
+
 app.listen(PORT, () => {
   console.log(`Service is running on port ${PORT}`);
 });
